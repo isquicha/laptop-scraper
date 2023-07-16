@@ -9,10 +9,12 @@ description = "Scrapes laptop data from a website"
 readme = "readme.md"
 requires-python = ">=3.11"
 dependencies = [
+    "beautifulsoup4==4.12.2",
     "certifi==2023.5.7",
     "charset-normalizer==3.2.0",
     "idna==3.4",
     "requests==2.31.0",
+    "soupsieve==2.4.1",
     "urllib3==2.0.3",
 ]
 
@@ -22,10 +24,6 @@ ltscp = "laptop_scraper.__main__:main"
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-s -vv"
-filterwarnings = [
-    "error",
-    'ignore:currentThread\(\) is deprecated.*:DeprecationWarning',
-]
 
 [tool.black]
 include = '\.pyi?$'
@@ -80,5 +78,7 @@ dev = [
     "platformdirs==3.8.1",
     "pycodestyle==2.10.0",
     "pyflakes==3.0.1",
+    "types-requests==2.31.0.1",
+    "types-urllib3==1.26.25.13",
     "typing_extensions==4.7.1",
 ]

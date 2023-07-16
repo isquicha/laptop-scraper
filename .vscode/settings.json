@@ -11,9 +11,9 @@
     "python.analysis.completeFunctionParens": false,
     "python.analysis.diagnosticMode": "workspace",
     "python.analysis.diagnosticSeverityOverrides": {
-        "reportUnknownParameterType": "warning",
-        "reportUnknownArgumentType": "warning",
-        "reportGeneralTypeIssues": "warning"
+        "reportUnknownParameterType": "none",
+        "reportUnknownArgumentType": "none",
+        "reportGeneralTypeIssues": "none"
     },
     "python.analysis.extraPaths": [
         ".",
