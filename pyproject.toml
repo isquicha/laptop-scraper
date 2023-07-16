@@ -1,0 +1,81 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "laptop_scraper"
+version = "0.1.0"
+description = "Scrapes laptop data from a website"
+readme = "readme.md"
+requires-python = ">=3.11"
+dependencies = [
+    "certifi==2023.5.7",
+    "charset-normalizer==3.2.0",
+    "idna==3.4",
+    "requests==2.31.0",
+    "urllib3==2.0.3",
+]
+
+[project.scripts]
+ltscp = "laptop_scraper.__main__:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-s -vv"
+filterwarnings = [
+    "error",
+    'ignore:currentThread\(\) is deprecated.*:DeprecationWarning',
+]
+
+[tool.black]
+include = '\.pyi?$'
+files = ["tests/**/*.py", "laptop_scraper/**/*.py"]
+line-length = 79
+
+[tool.flake8]
+exclude = [
+    ".git",
+    ".pytest_cache",
+    "__pycache__",
+    ".venv"
+]
+max-line-length = 79
+max-complexity = 4
+
+[tool.isort]
+profile = "black"
+line_length = 79
+
+[tool.mypy]
+python_version = "3.11"
+follow_imports = "normal"
+files = ["tests/**/*.py", "laptop_scraper/**/*.py"]
+show_column_numbers = true
+warn_unused_configs = true
+warn_return_any = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+
+[project.optional-dependencies]
+test = [
+    "iniconfig==2.0.0",
+    "packaging==23.1",
+    "pluggy==1.2.0",
+    "pytest==7.4.0",
+]
+dev = [
+    "laptop_scraper[test]",
+    "black==23.7.0",
+    "click==8.1.4",
+    "flake8==6.0.0",
+    "flake8-pyproject==1.2.3",
+    "isort==5.12.0",
+    "mccabe==0.7.0",
+    "mypy==1.4.1",
+    "mypy-extensions==1.0.0",
+    "pathspec==0.11.1",
+    "platformdirs==3.8.1",
+    "pycodestyle==2.10.0",
+    "pyflakes==3.0.1",
+    "typing_extensions==4.7.1",
+]

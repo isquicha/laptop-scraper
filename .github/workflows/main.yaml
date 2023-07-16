@@ -1,0 +1,40 @@
+name: "Continuous Integration Helper"
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Copia código fonte para o runner
+        uses: actions/checkout@v3
+      - name: Instala a versão correta do Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - name: Instala dependências
+        run: pip install '.[dev]'
+      - name: Roda o verificador de formatação
+        run: black --check .
+      - name: Roda o verificador de tipagem
+        run: mypy --strict .
+      - name: Roda o linter
+        run: flake8p .
+      - name: Roda os testes unitários
+        run: pytest tests/unit
+      - name: Roda os testes de integração
+        run: pytest tests/integration
+      - name: Roda os testes de ponta a ponta
+        run: pytest tests/e2e
+
+

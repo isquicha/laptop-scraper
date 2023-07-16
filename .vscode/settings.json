@@ -1,0 +1,62 @@
+{
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+        },
+        "editor.tabSize": 4,
+        "editor.formatOnSave": true,
+    },
+    "python.analysis.autoFormatStrings": true,
+    "python.analysis.autoImportCompletions": false,
+    "python.analysis.completeFunctionParens": false,
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportUnknownParameterType": "warning",
+        "reportUnknownArgumentType": "warning",
+        "reportGeneralTypeIssues": "warning"
+    },
+    "python.analysis.extraPaths": [
+        ".",
+        "src",
+    ],
+    "python.analysis.inlayHints.pytestParameters": false,
+    "python.analysis.inlayHints.variableTypes": false,
+    "python.analysis.inlayHints.functionReturnTypes": false,
+    "python.analysis.logLevel": "Trace",
+    "python.formatting.blackArgs": [
+        "-l 79"
+    ],
+    "python.formatting.provider": "black",
+    "python.languageServer": "Pylance",
+    "python.linting.cwd": "${workspaceFolder}",
+    "python.linting.flake8CategorySeverity.E": "Error",
+    "python.linting.flake8CategorySeverity.F": "Error",
+    "python.linting.flake8CategorySeverity.W": "Warning",
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [],
+    "python.linting.flake8Path": "flake8p",
+    "python.linting.mypyCategorySeverity.error": "Warning",
+    "python.linting.mypyArgs": [
+        "--ignore-missing-imports",
+        "--follow-imports=silent",
+        "--show-column-numbers",
+        "--strict"
+    ],
+    "python.linting.mypyEnabled": true,
+    "python.linting.mypyPath": "mypy",
+    "python.linting.prospectorEnabled": false,
+    "python.linting.prospectorArgs": [
+        "-s",
+        "veryhigh"
+    ],
+    "python.testing.autoTestDiscoverOnSaveEnabled": true,
+    "python.testing.cwd": "${workspaceFolder}",
+    "python.testing.debugPort": 3000,
+    "python.testing.promptToConfigure": true,
+    "python.testing.pytestArgs": [
+        "-vv"
+    ],
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestPath": "pytest",
+    "python.testing.unittestEnabled": false,
+}

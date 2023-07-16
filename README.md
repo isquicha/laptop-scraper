@@ -1,2 +1,1 @@
-# laptop-scraper
-Teste técnico Devnology
+# Laptop Scraper
