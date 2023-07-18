@@ -1,8 +1,30 @@
 {
     "language": "en,pt-BR",
     "words": [
+        "acer",
+        "asus",
+        "asuspro",
+        "eeebook",
         "exitstatus",
+        "ideapad",
+        "inspiron",
+        "isort",
         "lenovo",
-        "sessionfinish"
+        "ltscp",
+        "macbook",
+        "mypy",
+        "packard",
+        "probook",
+        "pyproject",
+        "pytest",
+        "sessionfinish",
+        "thinkpad",
+        "toshiba",
+        "travelmate",
+        "venv",
+        "vivobook",
+        "vostro",
+        "webscraper",
+        "zenbook"
     ]
 }
