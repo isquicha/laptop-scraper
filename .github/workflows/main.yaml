@@ -26,6 +26,8 @@ jobs:
         run: pip install '.[dev]'
       - name: Roda o verificador de formatação
         run: black --check .
+      - name: Roda o verificador de ordenação de imports
+        run: isort --check .
       - name: Roda o verificador de tipagem
         run: mypy --strict .
       - name: Roda o linter

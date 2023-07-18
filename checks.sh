@@ -3,6 +3,9 @@ echo "----------- Running checks -----------"
 echo "----------- Running black --check ."
 black --check .
 
+echo "----------- Running isort --check ."
+isort --check .
+
 echo "----------- Running mypy --strict ."
 mypy --strict .
 
