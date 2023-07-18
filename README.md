@@ -1,13 +1,13 @@
 # Laptop Scraper
 
-Faz scraping de laptops do site [webscraper.ip](https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops) e salva em um arquivo json.
+Faz scraping de laptops do site [webscraper.io](https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops) e salva em um arquivo json.
 
 ## Requisitos
 
 - [Python](https://www.python.org/downloads/) precisa estar instalado em sua máquina, na versão 3.11 ou superior.
 - [Pip](https://pip.pypa.io/en/stable/installation/) precisa estar instalado em sua máquina.
     - Ele vem junto com o Python 3.11 ou superior, mas caso não tenha, siga as instruções do link.
-    - Em teoria a versão do pip não deve influenciar no resultado do procedimento, mas para deixar explícito, a versão utilizada durante o desenvolvimento foi a 22.3.1
+    - Em teoria a versão do pip não deve influenciar no resultado do procedimento, mas para deixar explícito, a versão utilizada durante o desenvolvimento foi a 22.3.1.
 
 ## Instalação
 
@@ -17,6 +17,7 @@ Faz scraping de laptops do site [webscraper.ip](https://webscraper.io/test-sites
 - Abra a pasta por meio do terminal
     - `cd laptop-scraper`
 - Opcionalmente crie e ative um ambiente virtual
+    - Você precisará do `virtualenv` instalado
     - `python -m venv .venv`
     - `source .venv/bin/activate`
 - Instale as dependências
@@ -24,7 +25,7 @@ Faz scraping de laptops do site [webscraper.ip](https://webscraper.io/test-sites
 
 ## Como usar
 
-Utilize o comando `ltscp` para fazer o scraping e salvar os dados em um arquivo json.
+Utilize o comando `ltscp` (de **l**ap**t**op **sc**ra**p**er) para fazer o scraping e salvar os dados em um arquivo json.
 
 Você pode ver as opções de linha de comando disponíveis com `ltscp --help`.  
 Algumas das opções são:
