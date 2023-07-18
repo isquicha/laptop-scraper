@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Laptop Scraper",
+            "type": "python",
+            "request": "launch",
+            "module": "laptop_scraper",
+            "justMyCode": true
+        },
+    ]
+}
